@@ -1,0 +1,387 @@
+%Version 3.1 December 2024
+% See section 11 of the User Manual for version history
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%                                                                 %%
+%% Please do not use \input{...} to include other tex files.       %%
+%% Submit your LaTeX manuscript as one .tex document.              %%
+%%                                                                 %%
+%% All additional figures and files should be attached             %%
+%% separately and not embedded in the \TeX\ document itself.       %%
+%%                                                                 %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%\documentclass[referee,sn-basic]{sn-jnl}% referee option is meant for double line spacing
+
+%%=======================================================%%
+%% to print line numbers in the margin use lineno option %%
+%%=======================================================%%
+
+%%\documentclass[lineno,pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%=========================================================================================%%
+%% the documentclass is set to pdflatex as default. You can delete it if not appropriate.  %%
+%%=========================================================================================%%
+
+%%\documentclass[sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+
+%%Note: the following reference styles support Namedate and Numbered referencing. By default the style follows the most common style. To switch between the options you can add or remove “Numbered” in the optional parenthesis. 
+%%The option is available for: sn-basic.bst, sn-chicago.bst%  
+
+\documentclass[pdflatex,sn-nature]{sn-jnl}% Style for submissions to Nature Portfolio journals
+%%\documentclass[pdflatex,sn-basic]{sn-jnl}% Basic Springer Nature Reference Style/Chemistry Reference Style
+%\documentclass[pdflatex,sn-mathphys-num]{sn-jnl}% Math and Physical Sciences Numbered Reference Style
+%%\documentclass[pdflatex,sn-mathphys-ay]{sn-jnl}% Math and Physical Sciences Author Year Reference Style
+%%\documentclass[pdflatex,sn-aps]{sn-jnl}% American Physical Society (APS) Reference Style
+%%\documentclass[pdflatex,sn-vancouver-num]{sn-jnl}% Vancouver Numbered Reference Style
+%%\documentclass[pdflatex,sn-vancouver-ay]{sn-jnl}% Vancouver Author Year Reference Style
+%%\documentclass[pdflatex,sn-apa]{sn-jnl}% APA Reference Style
+%%\documentclass[pdflatex,sn-chicago]{sn-jnl}% Chicago-based Humanities Reference Style
+
+%%%% Standard Packages
+%%<additional latex packages if required can be included here>
+%\documentclass[12pt, a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath, amssymb}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{paralist}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{natbib}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em}
+
+
+\begin{document}
+	
+	\title{Mapping the Mind: A Ten-Dimensional Coordinate System for Classifying Philosophies of Artificial Intelligence}
+	\author*[1]{\fnm{Di} \sur{Zhang}}\email{di.zhang@xjtlu.edu.cn}
+	\affil*[1]{\orgdiv{School of AI and Advanced Computing}, \orgname{Xi'an Jiaotong-Liverpool University}, \orgaddress{\street{No. 111, Taicang Avenue}, \city{Suzhou}, \postcode{215400}, \state{Jiangsu}, \country{China PR}}}
+	
+	
+	\abstract{
+		The field of Artificial Intelligence (AI) is characterized by profound philosophical disagreements that transcend technical implementation and strike at fundamental questions about the nature of mind, intelligence, and knowledge. While traditional taxonomies such as ``symbolic vs. connectionist'' or ``strong vs. weak AI'' provide useful heuristics, they often obscure the complex multidimensional nature of philosophical commitments in AI research. This paper proposes a comprehensive analytical framework--the \textit{Ten-Dimensional Coordinate System for AI Philosophies}--to systematically map the philosophical landscape of AI. Drawing on contemporary debates in philosophy of mind, cognitive science, and AI ethics, we identify ten fundamental dimensions spanning ontology, epistemology, methodology, functional architecture, core competency, learning paradigm, consciousness, development, ethics, and cosmology. We demonstrate how this framework can precisely characterize major AI research programs (e.g., GOFAI, connectionism, embodied AI, functionalism) and contemporary developments like large language models. The coordinate system reveals deep philosophical affinities and tensions that cut across traditional disciplinary boundaries, provides a diagnostic tool for analyzing interdisciplinary conflicts, and serves as a generative framework for identifying underexplored research directions. By offering a more nuanced vocabulary for philosophical positioning, this framework advances the discourse in AI philosophy beyond reductive dichotomies and provides essential conceptual scaffolding for navigating the complex ethical and conceptual challenges of artificial intelligence.
+	}
+	
+	\keywords{Philosophy of Artificial Intelligence, Taxonomy, Symbolicism, Connectionism, Embodied Cognition, Functionalism, Strong AI, Philosophy of Mind, AI Ethics, Machine Learning}
+	
+	\maketitle
+	
+	\section{Introduction: Beyond Binary Thinking in AI Philosophy}
+	
+	The philosophical foundations of Artificial Intelligence have been contested terrain since the field's inception at the Dartmouth Conference in 1956. While technical progress in machine learning has been explosive, the philosophical discourse surrounding AI has often remained trapped in what \cite{Dreyfus1972} critiqued as a series of false dichotomies: \textbf{mind vs. body}, \textbf{reason vs. perception}, \textbf{symbolic vs. subsymbolic}, and \textbf{biological vs. artificial}. These binary oppositions, while historically productive, have increasingly proven inadequate for characterizing the complex philosophical positions that underlie contemporary AI research.
+	
+	The limitations of these traditional taxonomies become particularly evident when examining hybrid approaches like neuro-symbolic AI \citep{Besold2017}, embodied cognitive systems \citep{Pfeifer2007}, or the philosophical implications of large language models \citep{Bender2021}. As \cite{Boden2016} notes, the philosophical questions raised by AI are not merely academic but have profound implications for how we design, evaluate, and govern intelligent systems.
+	
+	This paper addresses this conceptual gap by introducing the \textit{Ten-Dimensional Coordinate System for AI Philosophies}. Our central thesis is that the philosophical commitments underlying different approaches to AI can be systematically characterized through their positions along ten relatively independent dimensions. This framework builds on earlier multidimensional analyses of cognitive science \citep{Thagard2005} while extending them to address specifically AI-related philosophical concerns, including recent debates about superintelligence \citep{Bostrom2014}, AI ethics \citep{Floridi2021}, and the nature of machine consciousness \citep{Reggia2013}.
+	
+	Unlike previous taxonomies that primarily focus on technical implementation, our coordinate system emphasizes the underlying philosophical commitments that often implicitly guide research programs. By providing a more nuanced mapping of the conceptual space, we aim to facilitate more productive dialogue between different AI research communities and provide a framework for systematically exploring the philosophical implications of new AI developments.
+	
+	\section{Theoretical Foundations and Related Work}
+	
+	\subsection{Historical Taxonomies in AI and Cognitive Science}
+	
+	The classic tripartite division of AI into \textbf{symbolicism, connectionism, and behaviorism} \citep{Brooks1991} has been remarkably durable, but it primarily categorizes approaches by their computational mechanisms rather than their philosophical foundations. Similarly, the distinction between \textbf{strong AI} (machines can truly think and understand) and \textbf{weak AI} (machines can simulate thinking) \citep{Searle1980} focuses on a single philosophical dimension while neglecting others.
+	
+	\cite{Newell1981} unified theories of cognition attempted to bridge these divides but remained largely within the symbolic paradigm. More recently, \cite{Wang2019} has proposed a framework for understanding different conceptions of intelligence, but his analysis focuses more on cognitive capabilities than philosophical foundations.
+	
+	\subsection{Philosophical Dimensions in Contemporary AI Research}
+	
+	Recent work in AI philosophy has highlighted the need for more sophisticated conceptual frameworks. \cite{Chollet2019} emphasizes the importance of priors and embodiment in intelligence, touching on what we categorize as the Ontology and Learning Paradigm dimensions. \cite{Lake2017} argument for building machines that learn and think like people integrates concerns across multiple dimensions, particularly Core Competency and Developmental View.
+	
+	The ethical dimensions of AI have also received increasing attention. \cite{Floridi2021} proposes a philosophy of technology that addresses the ethical status of AI systems, relevant to our Ethics and Value Alignment dimension. Similarly, work on AI safety and alignment \citep{Russell2019} engages with questions about the ultimate potential and controllability of AI systems, connecting to our Cosmology dimension.
+	
+	Our ten-dimensional framework synthesizes these diverse strands of inquiry into a unified analytical tool that captures the full spectrum of philosophical commitments in contemporary AI research.
+	
+	\section{The Ten-Dimensional Coordinate System}
+	
+	Each dimension in our coordinate system represents a spectrum between two contrasting philosophical positions on a fundamental aspect of intelligence or AI. The dimensions are designed to be relatively orthogonal, allowing for independent variation, though some natural affinities exist between certain positions.
+	
+	\subsection{Ontology (X1): Formal vs. Embodied Intelligence}
+	
+	This dimension concerns the fundamental nature of intelligence. The \textbf{Formal} pole, exemplified by \cite{Pylyshyn1984} computational theory of mind, views intelligence as an abstract information-processing capacity that can be realized in any sufficiently powerful computational system. This position is closely associated with functionalism in philosophy of mind \citep{Putnam1967} and underlies much of classical AI.
+	
+	The \textbf{Embodied} pole, drawing from phenomenological philosophy \citep{Varela1991} and embodied cognition \citep{Shapiro2011}, contends that intelligence is fundamentally shaped by and dependent on physical embodiment. Proponents argue that cognition emerges from the dynamic interaction between an organism and its environment \citep{Chemero2009}, and that abstract intelligence divorced from bodily experience is impossible or severely limited.
+	
+	\subsection{Epistemology (X2): Symbolic vs. Connectionist Knowledge}
+	
+	This dimension addresses how knowledge is represented and processed. \textbf{Symbolicism}, the foundation of Good Old-Fashioned AI (GOFAI) \citep{Newell1976}, views knowledge as explicit, discrete symbols that can be manipulated according to formal rules. This approach emphasizes compositionality, systematicity, and explainability.
+	
+	\textbf{Connectionism}, revitalized by the parallel distributed processing approach \citep{Rumelhart1986} and contemporary deep learning \citep{LeCun2015}, represents knowledge as patterns of activation distributed across neural networks. This approach emphasizes gradient-based learning, fault tolerance, and similarity-based reasoning.
+	
+	\subsection{Methodology (X3): Engineering vs. Simulation}
+	
+	This dimension distinguishes between AI as engineering and AI as cognitive science. The \textbf{Engineering} approach, exemplified by \cite{Brooks1991} behavior-based robotics, focuses on building systems that work effectively, regardless of whether their mechanisms resemble human cognition. The motto ``wheels, not wings'' captures this pragmatic orientation.
+	
+	The \textbf{Simulation} approach aims to replicate human cognitive processes to understand the mind \citep{Sun2008}. This tradition includes cognitive architectures like ACT-R \citep{Anderson1996} and neural models that seek biological plausibility.
+	
+	\subsection{Functional Architecture (X4): Modular vs. Holistic}
+	
+	This dimension concerns the structural organization of intelligent systems. The \textbf{Modular} view, influenced by \cite{Fodor1983} modularity of mind hypothesis, posits that intelligence consists of specialized, domain-specific processing modules. This view is evident in systems with separate components for perception, reasoning, and action.
+	
+	The \textbf{Holistic} view, associated with connectionist approaches and unified cognitive architectures \citep{Minsky1986}, sees intelligence as emerging from highly integrated, interactive processing systems where knowledge and capabilities transfer across domains.
+	
+	\subsection{Core Competency (X5): Logical Reasoning vs. Pattern Recognition}
+	
+	This dimension identifies the fundamental operation considered most essential to intelligence. The \textbf{Logical Reasoning} view, central to the logicist tradition in AI \citep{McCarthy1959}, sees intelligence as fundamentally involving abstract inference and symbolic manipulation.
+	
+	The \textbf{Pattern Recognition} view, emphasized in statistical learning approaches \citep{Hastie2009}, sees intelligence as fundamentally involving the detection of statistical regularities in data and generalization from examples.
+	
+	\subsection{Learning Paradigm (X6): Top-Down vs. Bottom-Up}
+	
+	This dimension concerns how knowledge is acquired. \textbf{Top-Down} learning involves explicit instruction, programming, or knowledge engineering, where structured information is provided to the system \citep{Feigenbaum1977}.
+	
+	\textbf{Bottom-Up} learning involves knowledge construction through experience with data or environment \citep{Piaget1952}. This includes both supervised learning from labeled examples and reinforcement learning through environmental interaction \citep{Sutton2018}.
+	
+	\subsection{Consciousness and Intentionality (X7): Functionalism vs. Biological Naturalism}
+	
+	This dimension addresses the hard problems of consciousness and meaning. \textbf{Functionalism}, the dominant view in philosophy of mind and classical AI \citep{Block1980}, holds that mental states are defined by their causal roles and can be realized in multiple physical substrates.
+	
+	\textbf{Biological Naturalism}, defended by \cite{Searle1992}, insists that consciousness and intentionality are biological phenomena specific to certain biological systems, particularly human brains, and cannot be replicated in digital computers.
+	
+	\subsection{Developmental View (X8): Designism vs. Evolutionism}
+	
+	This dimension concerns the path to advanced intelligence. \textbf{Designism} believes intelligence can be directly engineered through careful design and programming \citep{Simon1996}.
+	
+	\textbf{Evolutionism} argues that genuine intelligence requires extended developmental processes involving interaction with rich environments \citep{Lungarella2003}, possibly through evolutionary algorithms \citep{Stanley2019} or cumulative cultural learning.
+	
+	\subsection{Ethics and Value Alignment (X9): Instrumentalism vs. Subjectivism}
+	
+	This dimension addresses the moral status of AI systems. \textbf{Instrumentalism} views AI as tools that derive their value entirely from human purposes \citep{Brynjolfsson2014}.
+	
+	\textbf{Subjectivism} holds that sufficiently advanced AI systems could become moral patients or even moral agents with interests and rights that must be considered \citep{Danaher2020}.
+	
+	\subsection{Cosmology (X10): Carbon Chauvinism vs. Cosmic Computationalism}
+	
+	This dimension concerns the ultimate potential and place of intelligence in the universe. \textbf{Carbon Chauvinism} expresses skepticism about the possibility of machine intelligence matching or exceeding human capabilities \citep{Penrose1989}.
+	
+	\textbf{Cosmic Computationalism} views intelligence as a fundamental property that can emerge in various physical systems and potentially exceed human capabilities by many orders of magnitude \citep{Bostrom2014, Kurzweil2005}.
+	
+	\section{Mapping Major AI Research Programs}
+	
+	Applying our coordinate system reveals the complex philosophical profiles of major AI approaches (see Table \ref{tab:schools}).
+	
+	\begin{table}[h!]
+		\centering
+		\caption{Philosophical Profiles of Major AI Research Programs}
+		\label{tab:schools}
+		\begin{tabular}{p{2.5cm} p{10cm}}
+			\toprule
+			\textbf{Research Program} & \textbf{Philosophical Profile} \\
+			\midrule
+			\textbf{GOFAI} & Strongly?? \textbf{Formal (X1), Symbolic (X2), Logical Reasoning (X5), Top-Down (X6)}. Typically \textbf{Modular (X4), Functionalist (X7), Designist (X8), Instrumentalist (X9)}. \\
+			\hline
+			\textbf{Connectionism} & Core commitment to \textbf{Connectionist (X2), Pattern Recognition (X5), Bottom-Up (X6)}. Generally \textbf{Formal (X1), Holistic (X4), Engineering-oriented (X3), Instrumentalist (X9)}. \\
+			\hline
+			\textbf{Embodied AI} & Defined by \textbf{Embodied (X1)}. Typically allied with \textbf{Connectionist (X2), Bottom-Up (X6), Evolutionist (X8)}, and often sympathetic to \textbf{Biological Naturalism (X7)}. \\
+			\hline
+			\textbf{Neuro-Symbolic AI} & Attempts to bridge \textbf{Symbolic (X2)} and \textbf{Connectionist (X2)} positions. Typically maintains a \textbf{Formal (X1)} ontology while integrating \textbf{Logical Reasoning (X5)} and \textbf{Pattern Recognition (X5)} capabilities. \\
+			\hline
+			\textbf{Artificial General Intelligence} & Emphasizes \textbf{Holistic (X4)} architecture and \textbf{Evolutionist (X8)} development. Often combines \textbf{Formal (X1)} ontology with ambitions toward \textbf{Cosmic Computationalism (X10)}. \\
+			\bottomrule
+		\end{tabular}
+	\end{table}
+	
+	\section{Contemporary Applications and Case Studies}
+	
+	\subsection{Large Language Models: A Multidimensional Analysis}
+	
+	The philosophical implications of large language models (LLMs) like GPT-4 \citep{OpenAI2023} become clearer through our coordinate system:
+	
+	\begin{itemize}
+		\item \textbf{X1 (Formal):} LLMs operate purely in linguistic space, entirely disembodied from physical reality.
+		\item \textbf{X2 (Connectionist):} Their architecture is fundamentally based on artificial neural networks, specifically the Transformer \citep{Vaswani2017}.
+		\item \textbf{X3 (Engineering):} The primary goal is practical utility rather than cognitive simulation, though they incidentally model some aspects of human language.
+		\item \textbf{X5 (Pattern Recognition):} Their core operation is statistical pattern prediction, though they can simulate logical reasoning.
+		\item \textbf{X7 (Functionalism):} The intense debate about whether LLMs ``understand'' language reflects the tension between functional and biological conceptions of intentionality.
+	\end{itemize}
+	
+	This analysis explains why LLMs generate both excitement and skepticism: they produce functionally intelligent behavior while lacking several features traditionally associated with intelligence (embodiment, symbolic manipulation, conscious understanding).
+	
+	\subsection{AI Safety and Alignment Research}
+	
+	AI safety research \citep{Amodei2016} also exhibits distinct philosophical profiles. Work on technical alignment tends toward \textbf{Formal (X1)} and \textbf{Instrumentalist (X9)} positions, viewing AI as powerful tools that must remain under human control. In contrast, some discussions of AI rights and moral patienthood \citep{Shipley2021} explore \textbf{Subjectivist (X9)} positions.
+	
+	\section{Theoretical Contributions and Utility}
+	
+	\subsection{Diagnosing Interdisciplinary Conflicts}
+	
+	Our coordinate system helps explain why certain interdisciplinary collaborations in AI research prove difficult. For example, the tension between classical AI and embodied robotics often reflects opposition along multiple dimensions: X1 (Formal vs. Embodied), X2 (Symbolic vs. Connectionist), and X6 (Top-Down vs. Bottom-Up). Recognizing these fundamental philosophical differences can help researchers either find productive compromises or understand why certain integrations may be philosophically incoherent.
+	
+	\subsection{Generating Novel Research Directions}
+	
+	The framework systematically identifies underexplored regions of the philosophical space. Promising research directions include:
+	
+	\begin{itemize}
+		\item \textbf{Embodied Symbolic Systems (X1-Embodied + X2-Symbolic):} Can symbolic reasoning be grounded in physical interaction? This approach might address the symbol grounding problem \citep{Harnad1990} through embodied cognition rather than statistical correlation.
+		\item \textbf{Conscious AI Ethics (X7-Functionalism + X9-Subjectivism):} If we take functionalism about consciousness seriously, what ethical obligations might we have toward AI systems that exhibit consciousness-like properties?
+		\item \textbf{Evolutionary Design (X8-Evolutionism + X3-Engineering):} Can we engineer environments that foster the open-ended evolution of intelligence, blurring the distinction between design and growth?
+	\end{itemize}
+	
+	\section{Limitations and Future Directions}
+	
+	While comprehensive, our framework has limitations. The dimensions, though designed for relative independence, exhibit some natural correlations (e.g., Embodied positions often align with Connectionist and Evolutionist views). The framework also primarily addresses philosophical foundations rather than technical implementation details.
+	
+	Future work could develop quantitative measures for positions along each dimension, allowing for more precise comparison of research programs. The framework could also be extended to incorporate sociotechnical dimensions addressing how AI development is shaped by economic, political, and cultural factors \citep{Crawford2021}.
+	
+	\section{Conclusion}
+	
+	The Ten-Dimensional Coordinate System for AI Philosophies provides a sophisticated conceptual toolkit for navigating the complex philosophical landscape of artificial intelligence. By moving beyond reductive dichotomies, this framework enables more precise characterization of philosophical commitments, helps diagnose interdisciplinary conflicts, and suggests novel research directions at the intersections of different philosophical positions.
+	
+	As AI continues to advance and permeate society, clear philosophical thinking about its foundations becomes increasingly crucial. Our coordinate system contributes to this endeavor by providing a structured vocabulary for articulating and debating the deep philosophical questions that artificial intelligence raises about mind, intelligence, and our place in the universe.
+	
+	\section*{References}
+	
+	\begin{thebibliography}{99}
+		
+		\bibitem[Amodei et al., 2016]{Amodei2016}
+		Amodei, D., Olah, C., Steinhardt, J., Christiano, P., Schulman, J., and Mané, D. (2016). Concrete problems in AI safety. \textit{arXiv preprint arXiv:1606.06565}.
+		
+		\bibitem[Anderson, 1996]{Anderson1996}
+		Anderson, J. R. (1996). ACT: A simple theory of complex cognition. \textit{American Psychologist}, 51(4), 355.
+		
+		\bibitem[Bender et al., 2021]{Bender2021}
+		Bender, E. M., Gebru, T., McMillan-Major, A., and Shmitchell, S. (2021). On the dangers of stochastic parrots: Can language models be too big? In \textit{Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency} (pp. 610-623).
+		
+		\bibitem[Besold et al., 2017]{Besold2017}
+		Besold, T. R., d'Avila Garcez, A., Bader, S., Bowman, H., Domingos, P., Hitzler, P., ... and de Penning, L. (2017). Neural-symbolic learning and reasoning: A survey and interpretation. \textit{arXiv preprint arXiv:1711.03902}.
+		
+		\bibitem[Block, 1980]{Block1980}
+		Block, N. (1980). What is functionalism? In N. Block (Ed.), \textit{Readings in philosophy of psychology} (Vol. 1, pp. 171-184). Harvard University Press.
+		
+		\bibitem[Boden, 2016]{Boden2016}
+		Boden, M. A. (2016). \textit{AI: Its nature and future}. Oxford University Press.
+		
+		\bibitem[Bostrom, 2014]{Bostrom2014}
+		Bostrom, N. (2014). \textit{Superintelligence: Paths, dangers, strategies}. Oxford University Press.
+		
+		\bibitem[Brooks, 1991]{Brooks1991}
+		Brooks, R. A. (1991). Intelligence without representation. \textit{Artificial intelligence}, 47(1-3), 139-159.
+		
+		\bibitem[Brynjolfsson and McAfee, 2014]{Brynjolfsson2014}
+		Brynjolfsson, E., and McAfee, A. (2014). \textit{The second machine age: Work, progress, and prosperity in a time of brilliant technologies}. WW Norton and Company.
+		
+		\bibitem[Chemero, 2009]{Chemero2009}
+		Chemero, A. (2009). \textit{Radical embodied cognitive science}. MIT press.
+		
+		\bibitem[Chollet, 2019]{Chollet2019}
+		Chollet, F. (2019). On the measure of intelligence. \textit{arXiv preprint arXiv:1911.01547}.
+		
+		\bibitem[Crawford, 2021]{Crawford2021}
+		Crawford, K. (2021). \textit{The atlas of AI: Power, politics, and the planetary costs of artificial intelligence}. Yale University Press.
+		
+		\bibitem[Danaher, 2020]{Danaher2020}
+		Danaher, J. (2020). Welcoming robots into the moral circle: A defence of ethical behaviourism. \textit{Science and Engineering Ethics}, 26(4), 2023-2049.
+		
+		\bibitem[Dreyfus, 1972]{Dreyfus1972}
+		Dreyfus, H. L. (1972). \textit{What computers can't do: A critique of artificial reason}. Harper and Row.
+		
+		\bibitem[Feigenbaum, 1977]{Feigenbaum1977}
+		Feigenbaum, E. A. (1977). The art of artificial intelligence: Themes and case studies of knowledge engineering. In \textit{Proceedings of the 5th international joint conference on Artificial intelligence} (pp. 1014-1029).
+		
+		\bibitem[Floridi, 2021]{Floridi2021}
+		Floridi, L. (2021). \textit{The ethics of artificial intelligence: Principles, challenges, and opportunities}. Oxford University Press.
+		
+		\bibitem[Fodor, 1983]{Fodor1983}
+		Fodor, J. A. (1983). \textit{The modularity of mind}. MIT press.
+		
+		\bibitem[Harnad, 1990]{Harnad1990}
+		Harnad, S. (1990). The symbol grounding problem. \textit{Physica D: Nonlinear Phenomena}, 42(1-3), 335-346.
+		
+		\bibitem[Hastie et al., 2009]{Hastie2009}
+		Hastie, T., Tibshirani, R., and Friedman, J. (2009). \textit{The elements of statistical learning: data mining, inference, and prediction}. Springer Science and Business Media.
+		
+		\bibitem[Kurzweil, 2005]{Kurzweil2005}
+		Kurzweil, R. (2005). \textit{The singularity is near: When humans transcend biology}. Penguin.
+		
+		\bibitem[Lake et al., 2017]{Lake2017}
+		Lake, B. M., Ullman, T. D., Tenenbaum, J. B., and Gershman, S. J. (2017). Building machines that learn and think like people. \textit{Behavioral and Brain Sciences}, 40.
+		
+		\bibitem[LeCun et al., 2015]{LeCun2015}
+		LeCun, Y., Bengio, Y., and Hinton, G. (2015). Deep learning. \textit{Nature}, 521(7553), 436-444.
+		
+		\bibitem[Lungarella et al., 2003]{Lungarella2003}
+		Lungarella, M., Metta, G., Pfeifer, R., and Sandini, G. (2003). Developmental robotics: a survey. \textit{Connection Science}, 15(4), 151-190.
+		
+		\bibitem[McCarthy, 1959]{McCarthy1959}
+		McCarthy, J. (1959). Programs with common sense. In \textit{Proceedings of the Teddington Conference on the Mechanization of Thought Processes} (pp. 75-91).
+		
+		\bibitem[Minsky, 1986]{Minsky1986}
+		Minsky, M. (1986). \textit{The society of mind}. Simon and Schuster.
+		
+		\bibitem[Newell, 1981]{Newell1981}
+		Newell, A. (1981). The knowledge level. \textit{AI magazine}, 2(2), 1-1.
+		
+		\bibitem[Newell and Simon, 1976]{Newell1976}
+		Newell, A., and Simon, H. A. (1976). Computer science as empirical inquiry: Symbols and search. \textit{Communications of the ACM}, 19(3), 113-126.
+		
+		\bibitem[OpenAI, 2023]{OpenAI2023}
+		OpenAI (2023). GPT-4 Technical Report. \textit{arXiv preprint arXiv:2303.08774}.
+		
+		\bibitem[Penrose, 1989]{Penrose1989}
+		Penrose, R. (1989). \textit{The emperor's new mind: Concerning computers, minds, and the laws of physics}. Oxford University Press.
+		
+		\bibitem[Pfeifer and Bongard, 2007]{Pfeifer2007}
+		Pfeifer, R., and Bongard, J. (2007). \textit{How the body shapes the way we think: a new view of intelligence}. MIT press.
+		
+		\bibitem[Piaget, 1952]{Piaget1952}
+		Piaget, J. (1952). \textit{The origins of intelligence in children}. International Universities Press.
+		
+		\bibitem[Putnam, 1967]{Putnam1967}
+		Putnam, H. (1967). Psychological predicates. In W. H. Capitan and D. D. Merrill (Eds.), \textit{Art, mind, and religion} (pp. 37-48). University of Pittsburgh Press.
+		
+		\bibitem[Pylyshyn, 1984]{Pylyshyn1984}
+		Pylyshyn, Z. W. (1984). \textit{Computation and cognition: Toward a foundation for cognitive science}. MIT Press.
+		
+		\bibitem[Reggia, 2013]{Reggia2013}
+		Reggia, J. A. (2013). The rise of machine consciousness: Studying consciousness with computational models. \textit{Neural Networks}, 44, 112-131.
+		
+		\bibitem[Rumelhart et al., 1986]{Rumelhart1986}
+		Rumelhart, D. E., McClelland, J. L., and PDP Research Group. (1986). \textit{Parallel distributed processing: Explorations in the microstructure of cognition} (Vol. 1). MIT press.
+		
+		\bibitem[Russell, 2019]{Russell2019}
+		Russell, S. (2019). \textit{Human compatible: Artificial intelligence and the problem of control}. Penguin.
+		
+		\bibitem[Searle, 1980]{Searle1980}
+		Searle, J. R. (1980). Minds, brains, and programs. \textit{Behavioral and Brain Sciences}, 3(3), 417-424.
+		
+		\bibitem[Searle, 1992]{Searle1992}
+		Searle, J. R. (1992). \textit{The rediscovery of the mind}. MIT Press.
+		
+		\bibitem[Shapiro, 2011]{Shapiro2011}
+		Shapiro, L. (2011). \textit{Embodied cognition}. Routledge.
+		
+		\bibitem[Shipley and Goldfarb, 2021]{Shipley2021}
+		Shipley, W., and Goldfarb, E. (2021). The artificial intelligence of the ethics of artificial intelligence: An introductory overview for law and regulation. In \textit{The Oxford Handbook of Ethics of AI}.
+		
+		\bibitem[Simon, 1996]{Simon1996}
+		Simon, H. A. (1996). \textit{The sciences of the artificial}. MIT press.
+		
+		\bibitem[Stanley and Lehman, 2019]{Stanley2019}
+		Stanley, K. O., and Lehman, J. (2019). \textit{Why greatness cannot be planned: The myth of the objective}. Springer.
+		
+		\bibitem[Sun, 2008]{Sun2008}
+		Sun, R. (2008). \textit{The Cambridge handbook of computational psychology}. Cambridge University Press.
+		
+		\bibitem[Sutton and Barto, 2018]{Sutton2018}
+		Sutton, R. S., and Barto, A. G. (2018). \textit{Reinforcement learning: An introduction}. MIT press.
+		
+		\bibitem[Thagard, 2005]{Thagard2005}
+		Thagard, P. (2005). \textit{Mind: Introduction to cognitive science}. MIT press.
+		
+		\bibitem[Varela et al., 1991]{Varela1991}
+		Varela, F. J., Thompson, E., and Rosch, E. (1991). \textit{The embodied mind: Cognitive science and human experience}. MIT press.
+		
+		\bibitem[Vaswani et al., 2017]{Vaswani2017}
+		Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A. N., ... and Polosukhin, I. (2017). Attention is all you need. In \textit{Advances in neural information processing systems} (pp. 5998-6008).
+		
+		\bibitem[Wang, 2019]{Wang2019}
+		Wang, P. (2019). On defining artificial intelligence. \textit{Journal of Artificial General Intelligence}, 10(2), 1-37.
+		
+	\end{thebibliography}
+	
+\end{document}
